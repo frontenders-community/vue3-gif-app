@@ -1,40 +1,47 @@
 <script setup>
+import GifsList from "./components/GifsList.vue";
+import Search from "./components/Search.vue";
+
 import { onMounted, reactive } from "vue";
 import axios from "axios";
 
 const env = import.meta.env;
 const state = reactive({
   results: [],
+  limit: 8,
+  needle: "excited"
 });
 
 onMounted(() => {
-  const limit = 8;
-  const needle = "excited";
+  searchGifs(state.needle);
+});
 
+function searchGifs(needle) {
+  state.needle = needle;
   axios
     .get("https://tenor.googleapis.com/v2/search", {
       params: {
-        q: needle,
+        q: state.needle,
         key: env.VITE_TENOR_API_KEY,
         client_key: env.VITE_TENOR_CLIENT_KEY,
-        limit: limit,
+        limit: state.limit,
       },
     })
     .then((resp) => {
       console.log(resp);
       state.results = resp.data.results;
     });
-});
+}
 </script>
 
 <template>
-  <header>Header</header>
+  <header>
+    <Search @start-search="searchGifs" />
+  </header>
 
   <main>
     <div class="container">
-      <div class="gif" v-for="(gif, index) in state.results" :key="index">
-        <img :src="gif.media_formats.nanogif.url" :alt="gif.content_description">
-      </div>
+      <GifsList :gifs="state.results" />
     </div>
   </main>
 </template>
