@@ -9,7 +9,7 @@ const env = import.meta.env;
 const state = reactive({
   results: [],
   limit: 8,
-  needle: "excited"
+  needle: "excited",
 });
 
 onMounted(() => {
@@ -35,16 +35,24 @@ function searchGifs(needle) {
 </script>
 
 <template>
-  <header>
-    <Search @start-search="searchGifs" />
-  </header>
+  <div class="container">
+    <header>
+      <h1>GIFapp</h1>
+      <Search @start-search="searchGifs" />
+    </header>
 
-  <main>
-    <div class="container">
+    <main>
       <GifsList :gifs="state.results" />
-    </div>
-  </main>
+    </main>
+  </div>
 </template>
 
 <style scoped>
+header {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-weight: 800;
+}
 </style>

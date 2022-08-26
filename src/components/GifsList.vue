@@ -9,3 +9,7 @@ defineProps(["gifs"]);
     <GifCard :gif="gif" />
   </div>
 </template>
+
+<style scoped>
+
+</style>
