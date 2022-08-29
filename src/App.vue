@@ -37,7 +37,7 @@ function searchGifs(needle) {
 <template>
   <div class="container">
     <header>
-      <h1>GIFapp</h1>
+      <h1>GIFAPP</h1>
       <Search @start-search="searchGifs" />
     </header>
 
@@ -54,5 +54,6 @@ header {
 
 h1 {
   font-weight: 800;
+  font-size: 3.6rem;
 }
 </style>
