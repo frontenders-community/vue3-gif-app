@@ -3,7 +3,7 @@ defineProps(["gif"]);
 </script>
 
 <template>
-  <div>
+  <div v-if="gif.media_formats">
     <img :src="gif.media_formats.tinygif.url" :alt="gif.content_description" />
   </div>
 </template>

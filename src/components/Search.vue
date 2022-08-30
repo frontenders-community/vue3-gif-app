@@ -29,8 +29,8 @@ function startSearch() {
 }
 input {
   flex-grow: 1;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
   font-size: 1.8rem;
   letter-spacing: 1px;
   border-radius: 0.6rem 0 0 0.6rem;
