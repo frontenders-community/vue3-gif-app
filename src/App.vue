@@ -8,7 +8,7 @@ import axios from "axios";
 const env = import.meta.env;
 const state = reactive({
   results: [],
-  limit: 8,
+  limit: 16,
   needle: "excited",
 });
 
