@@ -10,6 +10,7 @@ const state = reactive({
   results: [],
   limit: 16,
   needle: "excited",
+  next: ''
 });
 
 onMounted(() => {
@@ -28,8 +29,8 @@ function searchGifs(needle) {
       },
     })
     .then((resp) => {
-      console.log(resp);
       state.results = resp.data.results;
+      state.next = resp.data.next;
     });
 }
 </script>
