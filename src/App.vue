@@ -83,7 +83,7 @@ header {
   left: 0;
   right: 0;
   z-index: 100;
-  background-color: var(--color-background);
+  background-color: var(--color-header-background);
   padding-bottom: 2em;
 }
 
