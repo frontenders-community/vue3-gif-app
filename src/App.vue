@@ -1,6 +1,7 @@
 <script setup>
 import GifsList from "./components/GifsList.vue";
 import Search from "./components/Search.vue";
+import ColorThemeSwitch from "./components/ColorThemeSwitch.vue";
 
 import { onMounted, reactive } from "vue";
 import axios from "axios";
@@ -54,18 +55,28 @@ function searchNextGifs() {
       pos: state.next
     }
   })
-  .then((resp) => {
-    state.results = [...state.results, ...resp.data.results];
-    state.next = resp.data.next;
-  })
+    .then((resp) => {
+      state.results = [...state.results, ...resp.data.results];
+      state.next = resp.data.next;
+    })
 }
 </script>
 
 <template>
   <header>
     <div class="container">
-      <h1>GIFAPP</h1>
-      <Search @start-search="searchGifs" />
+      <!-- Top header -->
+      <div class="top">
+        <h1>GIFAPP</h1>
+        <ColorThemeSwitch/>
+      </div>
+      <!-- /Top header -->
+
+      <!-- Bottom header -->
+      <div class="bottom">
+        <Search @start-search="searchGifs" />
+      </div>
+      <!-- /Bottom header -->
     </div>
   </header>
 
@@ -85,6 +96,12 @@ header {
   z-index: 100;
   background-color: var(--color-header-background);
   padding-bottom: 2em;
+}
+
+header .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 main {
