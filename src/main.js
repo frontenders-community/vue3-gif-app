@@ -9,9 +9,11 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
 /* add icons to the library */
 library.add(faMagnifyingGlass)
+library.add(faWhatsapp)
 
 import './assets/main.css'
 

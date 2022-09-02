@@ -6,3 +6,4 @@ The app hase the fallowing functionalities:
 - Search by keywords
 - Infinite scroll
 - Light / Dark mode
+- Share gif by whatsapp
