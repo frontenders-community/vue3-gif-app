@@ -67,8 +67,11 @@ function searchNextGifs() {
     <div class="container">
       <!-- Top header -->
       <div class="top">
-        <h1>GIFAPP</h1>
-        <ColorThemeSwitch/>
+        <div class="logo">
+          <h1>GIFAPP</h1>
+          <small>Powered By Tenor</small>
+        </div>
+        <ColorThemeSwitch />
       </div>
       <!-- /Top header -->
 
@@ -104,6 +107,10 @@ header .top {
   align-items: center;
 }
 
+header .top .logo {
+  margin: 1em 0;
+}
+
 main {
   padding-top: 15rem;
 }
@@ -111,5 +118,6 @@ main {
 h1 {
   font-weight: 800;
   font-size: 3.6rem;
+  line-height: 3.6rem;
 }
 </style>

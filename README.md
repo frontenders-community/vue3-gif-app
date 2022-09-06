@@ -7,3 +7,4 @@ The app hase the fallowing functionalities:
 - Infinite scroll
 - Light / Dark mode
 - Share gif by whatsapp
+- Copy link to clipboard

@@ -1,5 +1,6 @@
 <script setup>
 import WhatsappShare from './WhatsappShare.vue';
+import CopyToClipboard from './CopyToClipboard.vue';
 
 defineProps(["gif"]);
 </script>
@@ -9,6 +10,7 @@ defineProps(["gif"]);
     <img :src="gif.media_formats.tinygif.url" :alt="gif.content_description" />
     <div class="card-overlay">
       <div class="actions">
+        <CopyToClipboard :copyText="gif.media_formats.tinygif.url"/>
         <WhatsappShare :message="gif.media_formats.tinygif.url"/>
       </div>
     </div>
@@ -37,11 +39,11 @@ defineProps(["gif"]);
 
 .card-overlay .actions {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  inset: 0;
   padding: 1em;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .card-overlay .actions span {
@@ -51,4 +53,6 @@ defineProps(["gif"]);
 .card:hover .card-overlay {
   display: block;
 }
+
+
 </style>
