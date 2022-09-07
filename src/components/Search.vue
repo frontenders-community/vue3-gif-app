@@ -61,6 +61,7 @@ button {
   );
   background-size: 500%;
   animation: gradient-loop 2s infinite linear;
+  padding: 0;
 }
 
 button:hover {
