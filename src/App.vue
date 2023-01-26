@@ -19,7 +19,7 @@ onMounted(() => {
   searchGifs(state.needle);
 
   window.onscroll = () => {
-    let bottomReached = document.documentElement.scrollTop + window.innerHeight === document.documentElement.offsetHeight;
+    let bottomReached = (document.documentElement.scrollTop + window.innerHeight) > (document.documentElement.offsetHeight - (window.innerHeight * 0.1));
     if (bottomReached) {
       searchNextGifs(state.needle);
     }
