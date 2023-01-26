@@ -17,47 +17,34 @@ const props = defineProps(["gifs"]);
 
 <style scoped>
 .gifs-grid {
-  line-height: 0;
-  column-count: 4;
-  column-gap: 12px;
-}
-
-@media (max-width: 1200px) {
-  .gifs-grid {
-    -moz-column-count: 4;
-    -webkit-column-count: 4;
-    column-count: 4;
-  }
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 12px;
 }
 
 @media (max-width: 1000px) {
   .gifs-grid {
-    -moz-column-count: 3;
-    -webkit-column-count: 3;
-    column-count: 3;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 @media (max-width: 800px) {
   .gifs-grid {
-    -moz-column-count: 2;
-    -webkit-column-count: 2;
-    column-count: 2;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 400px) {
   .gifs-grid {
-    -moz-column-count: 1;
-    -webkit-column-count: 1;
-    column-count: 1;
+    grid-template-columns: 1fr;
   }
 }
 
 .gif {
   display: inline-block;
   width: 100%;
-  height: auto;
+  height: 100%;
   margin-bottom: 12px;
 }
 </style>
