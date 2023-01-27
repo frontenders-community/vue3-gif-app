@@ -11,14 +11,6 @@ Altre funzionalità del progetto sono:
 - possibilità di copiare link in clipboard;
 - layout responsive.
 
-
-### Starter Kit
-
-Nello starter kit troverte una cartella assets, suddivisa in questo modo:
-
-- **sounds**: contiene i suoni da riprodurre al click dei tasti (credits: https://plays.org/virtu-drum-pads/)
-- **data.js**: un array js che contiene i dati dei suoni e delle altre informazioni utili allo sviluppo
-
 ### Consigli
 
 Questa challenge potrebbe essere realizzata tramite vanilla js, ma sicuramente è più consigliato utilizzare uno dei framework che renderà la struttura del progetto più manutenibile.
