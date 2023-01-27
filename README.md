@@ -2,14 +2,14 @@
 
 ## Challenge #6 - GIF APP
 
-In questa challenge andiamo a creare un'app per cercare delle gif, insernedo parole chiave. Per la ricerca utilizzeremo https://tenor.com/gifapi.
-Dopo aver inserito la chiave di ricerca e premuto invio, l'utente potrà visulizzare le gif posizinati nella griglia. Ricordate che non vedremo tutte le gif, perché sono divise in pagine. Quindi dobbiamo eseguire le chiamate api al scroll della pagina, implementando l'effetto dell'infinite scroll.
+In questa challenge andiamo a creare un'app per cercare delle GIF tramite parole chiave. Per la ricerca utilizzeremo https://tenor.com/gifapi.
+Dopo aver inserito la chiave di ricerca e premuto Invio (o cliccato sul pulsante), l'utente potrà visulizzare le gif in una griglia. Attenzione: non vedremo tutte le gif poiché l'API effettua la paginazione dei risultati. Proviamo quindi ad eseguire nuove chiamate api allo scroll della pagina (effetto noto come infinite scroll).
 
 Altre funzionalità del progetto sono:
 - possibilità di cambiare tema: light/dark mode switcher;
 - possibilità di condividere il link della gif tramite whatsapp;
 - possibilità di copiare link in clipboard;
-- layout responsive.
+- layout responsive
 
 ### Consigli
 
@@ -26,8 +26,8 @@ Partiamo dalla documentazione https://developers.google.com/tenor/guides/quickst
 ### Tecnologie
 
 HTML, CSS/SASS.
-JS plain o React / Vue / Svelte.
-No librerie CSS.
+JS plain o un framework a tua scelta.
+CSS plain o una libreria a tua scelta.
 
 ### Preview
 ![desktop dark](desktop-dark.png)
